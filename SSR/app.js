@@ -6,7 +6,5 @@ export function createApp() {
     template: `<div @click="count++">{{ count }}</div>`,
   });
 
-  
-
   return app
 }
