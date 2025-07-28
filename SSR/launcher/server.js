@@ -105,7 +105,7 @@ server.get('/', async (req, res) => {
           // 将 SSR 数据注入到客户端
           window.__SSR_DATA__ = ${JSON.stringify(ssrData)};
         </script>
-        <script type="module" src="/client.js"></script>
+        <script type="module" src="/launcher/client.js"></script>
       </head>
       <body>
         <div id="app">${html}</div>
@@ -129,7 +129,7 @@ server.get('/', async (req, res) => {
   }
 });
 
-server.use(express.static('./launcher'));
+server.use(express.static('.'));
 
 const port = 3000;
 server.set('port', port);
